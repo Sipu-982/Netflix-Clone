@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.banner{
+    background: url('../Images/netflix-bg.jpg');
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-bottom-width: 4px;
+     border-bottom-style: solid;
+    border-image: linear-gradient(to right, #3f060d 0%, #f60525 100%,rgb(42, 2, 2)) 1;
+    filter: drop-shadow(15px 0 20px rgb(28, 148, 253));
+}
+.login-banner{
+  background: url('../Images/netflix-bg.jpg');
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;   
+}
+.overlay-color{
+    background: rgb(0, 0, 0,0.8);
+}
+.overlay-bg{
+       background: rgb(0, 0, 0,0.5);
+ 
+}
+.layer-content{
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  font-variation-settings:
+    "wdth" 100;
+}
+.layer-content h2{
+     font-size: 4em;
+       font-weight: bold;  
+}
+input{
+    width: 400px;
+    border: 2px solid gray;
+    padding: 13px;
+    border-radius: 5px;
+    background: rgba(23, 23, 23, 0.7);
+}
+::placeholder{
+    color: gray;
+}

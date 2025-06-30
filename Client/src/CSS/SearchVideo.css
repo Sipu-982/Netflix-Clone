@@ -1,0 +1,9 @@
+.searchbar{
+    background: rgb(245, 241, 240);
+    outline: none;
+    transition: border-color 0.5s ease;
+    border: 1px solid rgb(214, 208, 208);
+}
+.searchbar:focus{
+  border-color: rgb(41, 7, 46)
+}
