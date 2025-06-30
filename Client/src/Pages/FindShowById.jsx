@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 const FindShowById = () => {
 
-    const [videoInfo,setVideoInfo] = useState([])
+    const [videoInfo,setVideoInfo] = useState(null)
     const {id}= useParams()
 
     useEffect(()=>{
@@ -15,7 +15,7 @@ const FindShowById = () => {
           alert("No token found. Please log in again.");
           return;
         }
-        const response = await axios.get(`http://localhost:4000/api/upload/getVideo/${id}`,{
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/upload/getVideo/${id}`,{
            headers: {
             Authorization: `Bearer ${token}`
           } 

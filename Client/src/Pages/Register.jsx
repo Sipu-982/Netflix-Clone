@@ -41,7 +41,7 @@ const Register = () => {
      if(file){
       formData.append("profile",file)
      }
-      const response = await axios.post("http://localhost:4000/api/auth/register", formData);
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/register`, formData);
       setMessage(response.data.message);
       console.log(response.data.data);
       setUserInfo({ fullname:'',email: '', phone: '',password:'' });

@@ -36,12 +36,8 @@
   font-variation-settings:
     "wdth" 100;
 }
-.layer-content h2{
-     font-size: 4em;
-       font-weight: bold;  
-}
+
 input{
-    width: 400px;
     border: 2px solid gray;
     padding: 13px;
     border-radius: 5px;

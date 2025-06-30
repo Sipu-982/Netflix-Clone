@@ -51,7 +51,7 @@ const SearchVideo = () => {
     const fetchVideos = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('http://localhost:4000/api/upload/get-movies');
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/upload/get-movies`);
         setVideoData((response.data.MoviesData || []).slice(0, 7));
       } catch (error) {
         console.error(error.response?.data?.message || 'Upload failed!');

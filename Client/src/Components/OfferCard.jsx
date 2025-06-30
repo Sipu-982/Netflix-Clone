@@ -30,7 +30,7 @@ const OfferCard = () => {
   ];
 
   return (
-    <div className='min-h-[65vh] px-25'>
+    <div className='min-h-[65vh] lg:px-25 px-5'>
       <h2 className='text-3xl font-bold text-white mb-8'>More Reasons to Join</h2>
       <div className="w-full grid grid-cols-1 md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-6">
         {cards.map((cardInfos, index) => (

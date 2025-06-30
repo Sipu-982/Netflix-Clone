@@ -1,7 +1,5 @@
-// src/pages/WatchVideo.jsx
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import { FaChevronLeft } from 'react-icons/fa';
 
 const WatchedVideo = () => {
   const location = useLocation();

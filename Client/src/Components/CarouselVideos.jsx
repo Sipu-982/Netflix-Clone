@@ -30,7 +30,7 @@ const CarouselVideos = () => {
     const fetchVideos = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('http://localhost:4000/api/upload/get-movies');
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/upload/get-movies`);
         setVideoData((response.data.MoviesData || []).slice(0, 7));
       } catch (error) {
         console.error(error.response?.data?.message || 'Upload failed!');
@@ -45,7 +45,7 @@ const CarouselVideos = () => {
     superLargeDesktop: { breakpoint: { max: 4000, min: 1600 }, items: 5 },
     desktop: { breakpoint: { max: 1600, min: 1024 }, items: 6 },
     tablet: { breakpoint: { max: 1024, min: 640 }, items: 4 },
-    mobile: { breakpoint: { max: 640, min: 0 }, items: 1 },
+    mobile: { breakpoint: { max: 640, min: 0 }, items: 3 },
   };
 
   const CustomButtonGroup = ({ next, previous }) => (
@@ -72,7 +72,7 @@ const CarouselVideos = () => {
   }
 
   return (
-    <div className="px-25 pt-15 min-h-[65vh]">
+    <div className="lg:px-25 px-4 pt-15 min-h-[65vh]">
       <h1 className="text-2xl font-bold text-left mb-2 text-white">Trending Now</h1>
       <Carousel
         responsive={responsive}

@@ -25,7 +25,7 @@ const Login = () => {
     setMessage('');
     setLoading(true)
     try {
-      const response = await axios.post("http://localhost:4000/api/auth/login", userInfo);
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/login`, userInfo);
       setMessage(response.data.message);
       const { token, data } = response.data;
       localStorage.setItem("authenticateUser", token);
@@ -126,15 +126,11 @@ const Login = () => {
             <div className="flex justify-center text-center my-3">
               <span className='text-gray-300'>OR</span>
             </div>
-
+            <div className="my-4">
             <button type='button' className='p-2 w-full bg-[rgb(131,128,128,0.5)] rounded text-white cursor-pointer'>
               Use a sign-in code
             </button>
-
-            <div className="flex py-2 justify-center">
-              <Link className='text-center text-white underline'>Forgot Password?</Link>
             </div>
-
             <div className="w-full flex items-center gap-x-2">
               <div className=""><input type="checkbox"  id="check" name="check" /></div>
               <div className=""><span className='text-white'>Remember me</span></div>

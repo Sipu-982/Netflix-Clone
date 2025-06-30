@@ -18,7 +18,7 @@ const VerifyOtp = () => {
        setLoading(true)
       setMessage('')
         try {
-            const response = await axios.post("http://localhost:4000/api/auth/verifyOtp",{
+            const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/verifyOtp`,{
                email,otp
             })
             setMessage(response.data.message)
@@ -126,14 +126,14 @@ const VerifyOtp = () => {
 )}
 
   {loading ? 'Verifying...' : 'Verify OTP'}
-</button>                 <div className="flex justify-center">
-                    <p className="text-sm text-black">Didn't receive the OTP? &nbsp;<Link to='/loginOtp' className='text-blue-800'>Resend OTP</Link></p>
-                    </div>  
-                               <div className="flex justify-start"><Link to='/' className='flex items-center gap-x-2 text-black p-2 text-[18px] text-center'><span><FcLeft size={20}/></span><span>Back</span></Link></div>
-                    
-            </form>
-          </div>
-        </div>
+</button>
+<div className="flex justify-center">
+<p className="text-sm text-black">Didn't receive the OTP? &nbsp;<Link to='/' className='text-blue-800'>Resend OTP</Link></p>
+</div>  
+<div className="flex justify-start"><Link to='/' className='flex items-center gap-x-2 text-black p-2 text-[18px] text-center'><span><FcLeft size={20}/></span><span>Back</span></Link></div>
+</form>
+</div>
+</div>
   )
 }
 
